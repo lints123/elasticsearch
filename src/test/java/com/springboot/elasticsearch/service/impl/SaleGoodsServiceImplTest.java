@@ -20,4 +20,9 @@ public class SaleGoodsServiceImplTest {
     public void saleGoodsList() {
         saleGoodsService.SaleGoodsList();
     }
+
+    @Test
+    public void SaleGoodsText(){
+        saleGoodsService.SaleGoodsTest();
+    }
 }

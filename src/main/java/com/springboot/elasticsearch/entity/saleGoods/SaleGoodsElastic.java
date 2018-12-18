@@ -41,10 +41,10 @@ public class SaleGoodsElastic {
     private String contentsName;
 
     // 商品的属性列表
-    private List<GoodsAttrElastic> goodsAttrElasticList;
+    //private List<GoodsAttrElastic> goodsAttrElasticList;
 
     // 商品所属店铺列表
-    private List<ShopElastic> shopElasticList;
+    //private List<ShopElastic> shopElasticList;
 
     public String getSaleGoodsId() {
         return saleGoodsId;
@@ -118,7 +118,7 @@ public class SaleGoodsElastic {
         this.contentsName = contentsName;
     }
 
-    public List<GoodsAttrElastic> getGoodsAttrElasticList() {
+  /*  public List<GoodsAttrElastic> getGoodsAttrElasticList() {
         return goodsAttrElasticList;
     }
 
@@ -132,5 +132,5 @@ public class SaleGoodsElastic {
 
     public void setShopElasticList(List<ShopElastic> shopElasticList) {
         this.shopElasticList = shopElasticList;
-    }
+    }*/
 }
