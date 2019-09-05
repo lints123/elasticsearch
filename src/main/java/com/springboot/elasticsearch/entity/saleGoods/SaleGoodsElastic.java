@@ -7,20 +7,32 @@ import org.springframework.data.elasticsearch.annotations.FieldIndex;
 import org.springframework.data.elasticsearch.annotations.FieldType;
 
 import java.util.Date;
-import java.util.List;
 
+/**
+ *  FieldIndex.not_analyzed：不会分词，只能根据原词索引Field;
+ *  FieldIndex.analyzed：根据分词器分词，可以根据原词和分词后的词条索引Field;
+ *  FieldIndex.no：该字段不会被索引，查不到；
+ */
 @Document(indexName = "#{esAttribute.indexSaleGoodsNew}", type = "#{esAttribute.typeSaleGoodsNew}")
 public class SaleGoodsElastic {
+
+    // ID
     @Id
     @Field(type = FieldType.String)
-    private String saleGoodsId; // ID
+    private String saleGoodsId;
+
+    // 名称
     @Field(type = FieldType.String, index = FieldIndex.analyzed)
-    private String name;// 名称
+    private String name;
+
+    // 状态
     @Field(type = FieldType.Integer)
-    private Integer status;// 状态
+    private Integer status;
+
     // 商品所属企业id
     @Field(type = FieldType.String ,index = FieldIndex.not_analyzed)
     private String organizationId;
+
     // 商品所属企业名称
     @Field(type = FieldType.String, index = FieldIndex.analyzed)
     private String organizationName;
